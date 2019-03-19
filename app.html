@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+    <title> App </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quattrocento+Sans" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+ </head>
+<body id="corpo">
+
+        <div class="container-fluid">
+                <nav class="navbar navbar-expand-sm fixed-top">
+                <!-- Links -->
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <img src="" width="155px">
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                  </ul>
+                  <!-- Navbar text-->
+                  <span class="navbar-text">
+                   <!-- Navbar text -->
+                  </span>
+                 </nav>
+                </div>
+               <div class="break"></div>
+                 <div class="container">
+                    <div class="text-center">
+                      <form id="formulario" name="formulario" action="" method="" style="margin-left: 23%;" >
+                        <div class="form-group  col-md-8  ">
+                          <select class="form form-control" id="color" onchange="SelectColor()">
+                            <option value="">Selecione uma cor</option>
+                            <option value="natureza" >Natureza</option>
+                            <option value="animais" >Zebras</option>
+                            <option value="cidade">Dubai</option>
+                            <option value="tecnology">Tecnologia</option>
+                          </select>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+
+
+       
+
+             <script>
+
+                 //  Manipulando elementos nas páginas web  com javascript
+                 //  Sistema de aplicação de backgound com javascript e jquery
+                 //  Desenvolvedor: Valdir Silva
+                 //  19/03/2019
+
+                 function SelectColor(){
+                    // cor recebe o que obtiver do elementoDOM getElementById 
+                    var cor = document.getElementById('color').value;
+
+                    // verifica se a cor é igual e idêntica a condição
+                    // caso seja executa função
+                    if(cor === 'natureza'){
+                       bgNatureza();
+                    }
+                    if(cor === 'animais'){
+                       bgAnimais()
+                    }
+                    if(cor === 'cidade'){
+                       bgCidade();
+                    }
+                    if(cor === 'tecnology'){
+                       bgTecnology();
+                    }
+
+                 }
+
+                // Função quue retorna o background atribuido ao elemento via propriedades css
+                function bgNatureza(){
+                    return $('#corpo')
+                    .css('background-image','url(img/natureza.jpg)')
+                    .css('background-repeat','no-repeat')
+                    .css('background-attachment','fixed')
+                    .css('background-size','cover');
+                }
+                
+                function bgAnimais(){
+                    return $('#corpo')
+                    .css('background-image','url(img/animais.jpg)')
+                    .css('background-repeat','no-repeat')
+                    .css('background-attachment','fixed')
+                    .css('background-size','cover');
+                }
+                
+                 
+                function bgCidade(){
+                    return $('#corpo')
+                    .css('background-image','url(img/cidade.jpg)')
+                    .css('background-repeat','no-repeat')
+                    .css('background-attachment','fixed')
+                    .css('background-size','cover');
+                }
+
+                function bgTecnology(){
+                    return $('#corpo')
+                    .css('background-image','url(img/tecnology.jpg)')
+                    .css('background-repeat','no-repeat')
+                    .css('background-attachment','fixed')
+                    .css('background-size','cover');
+                }
+             
+             
+             
+             
+             </script>
+      
+          
+</body>
+</html>
